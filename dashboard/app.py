@@ -70,8 +70,15 @@ with col_title:
 
 with col_status:
     health = fetch("/health")
-    if health and health.get("status") == "ok":
-        st.success("🟢 API Online")
+    if health:
+        status = health.get("status", "unknown")
+        if status in ("ok", "degraded"):
+            if status == "ok":
+                st.success("🟢 API Online")
+            else:
+                st.warning("🟡 API Degraded — backend reachable")
+        else:
+            st.error("🔴 API Offline")
     else:
         st.error("🔴 API Offline")
 
