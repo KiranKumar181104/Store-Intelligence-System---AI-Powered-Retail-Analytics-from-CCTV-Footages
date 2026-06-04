@@ -30,6 +30,8 @@ If you only want the dashboard hosted, Streamlit Cloud is the easiest option.
 4. Set the app path to `dashboard/app.py`.
 5. Set environment variable `API_URL` to the deployed API URL.
 
+> Note: The dashboard uses the root `requirements.txt` in this repository, while the API backend uses `requirements-backend.txt` for its Docker build.
+
 > Note: The dashboard requires the API to be running at a public URL.
 
 ## Option 3: Render API + Streamlit Cloud dashboard
