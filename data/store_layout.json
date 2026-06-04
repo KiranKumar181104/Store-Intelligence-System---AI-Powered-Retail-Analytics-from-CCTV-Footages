@@ -1,0 +1,25 @@
+{
+  "store_id": "STORE_BLR_002",
+  "zones": [
+    {
+      "zone_id": "ENTRY",
+      "camera": "CAM_ENTRY_01",
+      "sku_zone": null
+    },
+    {
+      "zone_id": "BILLING",
+      "camera": "CAM_BILLING_01",
+      "sku_zone": "CHECKOUT"
+    },
+    {
+      "zone_id": "SKINCARE",
+      "camera": "CAM_FLOOR_01",
+      "sku_zone": "MOISTURISER"
+    },
+    {
+      "zone_id": "HAIRCARE",
+      "camera": "CAM_FLOOR_02",
+      "sku_zone": "SHAMPOO"
+    }
+  ]
+}
