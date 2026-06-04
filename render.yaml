@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: store-intelligence-backend
+    env: docker
+    branch: main
+    plan: free
+    region: oregon
+    dockerfilePath: Dockerfile
+    root: /
+    autoDeploy: true
+    envVars:
+      - key: DB_PATH
+        value: /app/db/store_intelligence.db
+      - key: POS_DATA_PATH
+        value: /app/data/pos_transactions.csv
+
+  - type: web
+    name: store-intelligence-dashboard
+    env: docker
+    branch: main
+    plan: free
+    region: oregon
+    dockerfilePath: Dockerfile.dashboard
+    root: /
+    autoDeploy: true
+    envVars:
+      - key: API_URL
+        value: https://store-intelligence-system-ai-powered-znv2.onrender.com
