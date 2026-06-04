@@ -19,7 +19,7 @@ import plotly.express as px
 import pandas as pd
 from datetime import datetime
 
-API_URL = os.environ.get("API_URL", "http://localhost:8000")
+API_URL = os.environ.get("API_URL") or st.secrets.get("API_URL", "http://localhost:8000")
 STORE_ID = "STORE_BLR_002"
 REFRESH_SECONDS = 5
 
